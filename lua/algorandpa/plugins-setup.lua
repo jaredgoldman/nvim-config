@@ -14,30 +14,34 @@ local packer_bootstrap = ensure_packer()
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("joshdick/onedark.vim")
-	use("mg979/vim-visual-multi")
 	-- $tmux & split window view navigation
+	use("christoomey/vim-tmux-navigator")
 	use("szw/vim-maximizer")
-	-- essential plugins
+  -- Multi-line editing
+	use("mg979/vim-visual-multi")
+	-- Essential plugins
 	use("tpope/vim-surround")
 	use("vim-scripts/ReplaceWithRegister")
-	-- commenting
+	-- Commenting
 	use("numToStr/Comment.nvim") -- lua
 	use("nvim-lua/plenary.nvim")
-	-- file explorer
+	-- File explorer
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {
 			"nvim-tree/nvim-web-devicons", -- optional, for file icons
 		},
 	})
-	-- icons
-	use("kyazdani42/nvim-web-devicons")
-	-- statusline
+	-- Statusline
 	use("nvim-lualine/lualine.nvim")
-	-- fuzzy finding
+	-- Fuzzy finding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
-
+  -- Linting and formatting
+  -- use({ 'scrooloose/syntastic'  })
+  -- use({ 'tpope/vim-fugitive'  })
+  use({ "dense-analysis/ale" })
+  -- LS Zero
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {

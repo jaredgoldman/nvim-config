@@ -1,4 +1,5 @@
 local opt = vim.opt -- for conciseness
+local api = vim.api
 
 -- line numbers
 opt.relativenumber = true
@@ -31,7 +32,7 @@ opt.backspace = "indent,eol,start"
 
 -- clipboard
 opt.clipboard:append("unnamedplus")
-vim.api.nvim_set_option("clipboard", "unnamedplus")
+api.nvim_set_option("clipboard", "unnamedplus")
 
 -- split windows
 opt.splitright = true
@@ -39,13 +40,11 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 
-vim.opt.number = true
-vim.opt.titlestring = [[%f %h%m%r%w - %{v:progname} %{luaeval('current_tab()')}]] 
-vim.opt.signcolumn = 'yes'
+opt.number = true
+opt.titlestring = [[%f %h%m%r%w - %{v:progname} %{luaeval('current_tab()')}]]
+opt.signcolumn = 'yes'
 -- Use system clipboard
 
 -- Show trailing whitespace
-vim.api.nvim_set_option("list", true)
-vim.api.nvim_set_option("listchars", "eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<")
-
-
+api.nvim_set_option("list", true)
+api.nvim_set_option("listchars", "eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<")

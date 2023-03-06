@@ -167,7 +167,7 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/algorandpa/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["onedark.vim"] = {
     loaded = true,
@@ -213,11 +213,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/algorandpa/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
     url = "https://github.com/mg979/vim-visual-multi"
-  },
-  xclip = {
-    loaded = true,
-    path = "/home/algorandpa/.local/share/nvim/site/pack/packer/start/xclip",
-    url = "https://github.com/astrand/xclip"
   }
 }
 
