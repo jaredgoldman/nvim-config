@@ -21,5 +21,6 @@ nvimtree.setup({
 				enable = false,
 			},
 		},
+    use_system_clipboard = true,
 	},
 })

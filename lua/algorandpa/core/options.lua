@@ -43,8 +43,10 @@ opt.iskeyword:append("-")
 opt.number = true
 opt.titlestring = [[%f %h%m%r%w - %{v:progname} %{luaeval('current_tab()')}]]
 opt.signcolumn = 'yes'
--- Use system clipboard
 
 -- Show trailing whitespace
 api.nvim_set_option("list", true)
 api.nvim_set_option("listchars", "eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<")
+
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
