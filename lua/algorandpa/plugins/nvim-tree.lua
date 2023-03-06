@@ -8,6 +8,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 vim.cmd([[ highlight NVimTreeIndentMarker guifg=#3FC5FF ]])
+vim.cmd([[ set encoding=UTF-8]])
 
 nvimtree.setup({
 	update_focused_file = {

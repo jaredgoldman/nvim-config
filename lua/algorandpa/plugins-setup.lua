@@ -26,12 +26,11 @@ return require("packer").startup(function(use)
 	use("numToStr/Comment.nvim") -- lua
 	use("nvim-lua/plenary.nvim")
 	-- File explorer
-	use({
-		"nvim-tree/nvim-tree.lua",
-		requires = {
-			"nvim-tree/nvim-web-devicons", -- optional, for file icons
-		},
-	})
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = [[require('algorandpa.plugins.nvim-tree')]],
+  }
 	-- Statusline
 	use("nvim-lualine/lualine.nvim")
 	-- Fuzzy finding
@@ -41,7 +40,9 @@ return require("packer").startup(function(use)
   -- use({ 'scrooloose/syntastic'  })
   -- use({ 'tpope/vim-fugitive'  })
   use({ "dense-analysis/ale" })
-  -- LS Zero
+  -- CoPilot
+  use({ "github/copilot.vim" })
+  -- LSP Zero
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
