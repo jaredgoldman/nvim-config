@@ -50,7 +50,7 @@ api.nvim_set_option("listchars", "eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes
 
 -- Copilot
 vim.g.copilot_no_tab_map = true
-vim.g.copilot_assume_mapped = true
+
 -- ALE
 vim.g.ale_linters = {
   javascript = {'eslint'},
@@ -121,4 +121,5 @@ vim.g.ale_fixers =  {
 
 vim.g.ale_fix_on_save = 1
 vim.g.ale_completion_enabled = 0
-vim.g.ale_completion_autoimport = 1
+vim.g.ale_completion_autoimport = 0
+vim.g.ale_hover_cursor = 0

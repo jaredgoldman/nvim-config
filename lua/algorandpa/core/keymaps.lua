@@ -44,4 +44,4 @@ keymap.set("n", "<leader>ps", ":PackerSync<CR>")
 keymap.set("n", "<leader>ls", ":LspStop<CR>")
 keymap.set("n", "<leader>lo", ":LspStart<CR>")
 -- Copilot j
-vim.api.nvim_set_keymap("i", "<leader><Tab>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<Tab><Tab>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
