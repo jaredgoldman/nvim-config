@@ -34,8 +34,6 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
 -- line movement
 keymap.set("n", "<A-j>", ":m ,-2<CR>==")
--- nnoremap <A-j> :m .+1<CR>==
--- nnoremap <A-k> :m .-2<CR>==
 
 -- Packer
 keymap.set("n", "<leader>ps", ":PackerSync<CR>")
@@ -44,4 +42,4 @@ keymap.set("n", "<leader>ps", ":PackerSync<CR>")
 keymap.set("n", "<leader>ls", ":LspStop<CR>")
 keymap.set("n", "<leader>lo", ":LspStart<CR>")
 -- Copilot j
-vim.api.nvim_set_keymap("i", "<Tab><Tab>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<PageUp>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

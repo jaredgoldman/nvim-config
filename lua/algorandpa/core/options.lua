@@ -98,28 +98,12 @@ vim.g.ale_linters = {
   latex = {'chktex'},
   texinfo = {'makeinfo'},
   vimwiki = {'vimwiki'},
-  pandoc = {'pandoc'},
-  pandoc_markdown = {'pandoc'},
-  pandoc_rst = {'pandoc'},
-  pandoc_asciidoc = {'pandoc'},
-  pandoc_org = {'pandoc'},
-  pandoc_html = {'pandoc'},
-  pandoc_tex = {'pandoc'},
-  pandoc_texinfo = {'pandoc'},
-  pandoc_mediawiki = {'pandoc'},
-  pandoc_dokuwiki = {'pandoc'},
-  pandoc_zimwiki = {'pandoc'},
-  pandoc_jats = {'pandoc'},
-  pandoc_opml = {'pandoc'},
 }
 
-vim.g.ale_fixers =  {
-  ["*"] = {'remove_trailing_lines', 'trim_whitespace'},
+vim.g.ale_fixers = {
+  ['*'] = {'remove_trailing_lines', 'trim_whitespace'},
   python = {'autopep8'},
   javascript = {'prettier'},
 }
 
 vim.g.ale_fix_on_save = 1
-vim.g.ale_completion_enabled = 0
-vim.g.ale_completion_autoimport = 0
-vim.g.ale_hover_cursor = 0
