@@ -2,7 +2,6 @@ local opt = vim.opt -- for conciseness
 local api = vim.api
 
 -- line numbers
-opt.relativenumber = true
 opt.number = true
 
 -- tabs & indentation
@@ -67,43 +66,23 @@ vim.g.ale_linters = {
   lua = {'luacheck'},
   vim = {'vint'},
   go = {'golangci-lint'},
-  ruby = {'rubocop'},
   rust = {'rustc'},
-  cpp = {'clangtidy'},
   c = {'clangtidy'},
   java = {'javac'},
   php = {'phpcs'},
   perl = {'perlcritic'},
-  haskell = {'hlint'},
-  scala = {'scalac'},
-  elm = {'elm'},
-  erlang = {'erlc'},
-  elixir = {'credo'},
-  julia = {'julia'},
-  r = {'lintr'},
-  dart = {'dartanalyzer'},
-  fsharp = {'fsharplint'},
-  crystal = {'crystal'},
-  ocaml = {'ocaml'},
-  swift = {'swift'},
-  kotlin = {'kotlinc'},
-  nix = {'nix'},
-  puppet = {'puppet'},
-  terraform = {'terraform'},
   dockerfile = {'dockerfile_lint'},
   graphql = {'graphql-schema-linter'},
   vue = {'vls'},
   svelte = {'svelte'},
-  tex = {'chktex'},
-  latex = {'chktex'},
-  texinfo = {'makeinfo'},
-  vimwiki = {'vimwiki'},
 }
 
 vim.g.ale_fixers = {
   ['*'] = {'remove_trailing_lines', 'trim_whitespace'},
-  python = {'autopep8'},
+  python = {'autopep8', 'black'},
   javascript = {'prettier'},
 }
 
+vim.g.ale_javascript_prettier_options = '--single-quote --tab-width 4 --semi false'
 vim.g.ale_fix_on_save = 1
+-- vim.g.ale_disable_lsp = 1

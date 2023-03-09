@@ -205,6 +205,11 @@ _G.packer_plugins = {
     path = "/home/algorandpa/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-closetag"] = {
+    loaded = true,
+    path = "/home/algorandpa/.local/share/nvim/site/pack/packer/start/vim-closetag",
+    url = "https://github.com/alvan/vim-closetag"
+  },
   ["vim-maximizer"] = {
     loaded = true,
     path = "/home/algorandpa/.local/share/nvim/site/pack/packer/start/vim-maximizer",

@@ -40,6 +40,8 @@ return require("packer").startup(function(use)
   use({ "dense-analysis/ale" })
   -- CoPilot
   use({ "github/copilot.vim" })
+  -- Autoclose tags
+    use({ "alvan/vim-closetag" })
   -- LSP Zero
 	use({
 		"VonHeikemen/lsp-zero.nvim",
