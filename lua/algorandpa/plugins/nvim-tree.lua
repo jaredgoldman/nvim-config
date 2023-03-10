@@ -23,4 +23,7 @@ nvimtree.setup({
 		},
     use_system_clipboard = true,
 	},
+    view = {
+        side = 'right'
+    }
 })

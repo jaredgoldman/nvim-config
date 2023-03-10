@@ -79,10 +79,11 @@ vim.g.ale_linters = {
 
 vim.g.ale_fixers = {
   ['*'] = {'remove_trailing_lines', 'trim_whitespace'},
-  python = {'autopep8', 'black'},
+  python = {'autopep8'},
   javascript = {'prettier'},
 }
 
+vim.g.ale_python_flake8_options = '--max-line-length=88'
 vim.g.ale_javascript_prettier_options = '--single-quote --tab-width 4 --semi false'
 vim.g.ale_fix_on_save = 1
--- vim.g.ale_disable_lsp = 1
+vim.g.ale_disable_lsp = 1
